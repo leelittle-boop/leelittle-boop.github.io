@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — SL Accounting Solutions CPA PLLC</title>
+<meta name="description" content="Strategic CPA services for high-growth SaaS, Biotech, and Tech companies. Cloud bookkeeping, Fractional CFO, tax strategy, and more.">
+<!-- Google Tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0Q0D5BH4JW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0Q0D5BH4JW');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy: #0D1B2A; --navy-mid: #122235; --slate: #3D5168; --mist: #8BA4BC;
+  --rule: rgba(255,255,255,0.08); --rule-light: #E2E8EE; --teal: #0ECFB3;
+  --teal-dim: rgba(14,207,179,0.12); --teal-glow: rgba(14,207,179,0.25);
+  --charcoal: #1F2D3D; --body-text: #2C3E50; --white: #FFFFFF;
+  --off-white: #F4F7FA; --gray-light: #EEF2F6; --gray-mid: #97AEBD;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.7; color: var(--body-text); background: var(--white); -webkit-font-smoothing: antialiased; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; background: rgba(13,27,42,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid var(--rule); padding: 0 4rem; height: 66px; display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.nav-logo-mark { width: 32px; height: 32px; border: 1.5px solid var(--teal); border-radius: 4px; display: flex; align-items: center; justify-content: center; }
+.nav-logo-mark span { font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 700; color: var(--teal); letter-spacing: -0.03em; }
+.nav-logo-text { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; color: var(--white); }
+.nav-logo-text sub { font-size: 10px; font-weight: 400; color: var(--mist); vertical-align: baseline; margin-left: 4px; letter-spacing: 0.06em; text-transform: uppercase; }
+.nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+.nav-links a { font-size: 13px; color: var(--mist); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--white); }
+.nav-links a.active { color: var(--teal); }
+.nav-cta { background: var(--teal) !important; color: var(--navy) !important; padding: 9px 20px !important; border-radius: 4px; font-weight: 600 !important; }
+.nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.nav-hamburger span { width: 22px; height: 2px; background: var(--mist); border-radius: 2px; }
+/* PAGE HERO */
+.page-hero { background: var(--navy); padding: 140px 4rem 80px; position: relative; overflow: hidden; }
+.page-hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(14,207,179,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(14,207,179,0.04) 1px, transparent 1px); background-size: 64px 64px; pointer-events: none; }
+.page-hero-glow { position: absolute; top: -120px; right: -80px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(14,207,179,0.07) 0%, transparent 65%); pointer-events: none; }
+.page-hero-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+.page-hero h1 { font-family: 'Inter', sans-serif; font-size: clamp(32px,4vw,52px); font-weight: 700; letter-spacing: -0.025em; color: var(--white); max-width: 700px; margin-bottom: 1.25rem; line-height: 1.1; }
+.page-hero-sub { font-size: 18px; font-weight: 300; color: var(--mist); max-width: 580px; line-height: 1.75; }
+.eyebrow { font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--teal); margin-bottom: 1rem; display: block; }
+/* SERVICES NAV */
+.services-nav { background: var(--navy-mid); border-bottom: 1px solid var(--rule); padding: 0 4rem; display: flex; gap: 0; overflow-x: auto; }
+.services-nav a { font-size: 13px; color: var(--mist); text-decoration: none; padding: 1rem 1.5rem; border-bottom: 2px solid transparent; white-space: nowrap; transition: all 0.2s; display: block; }
+.services-nav a:hover, .services-nav a.active { color: var(--teal); border-bottom-color: var(--teal); }
+/* SECTIONS */
+section { padding: 88px 4rem; }
+.section-inner { max-width: 1100px; margin: 0 auto; }
+h2 { font-family: 'Inter', sans-serif; font-size: clamp(26px,3vw,36px); font-weight: 700; letter-spacing: -0.02em; color: var(--charcoal); margin-bottom: 1rem; line-height: 1.15; }
+h3 { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 600; color: var(--charcoal); letter-spacing: -0.01em; margin-bottom: 0.6rem; }
+.section-lead { font-size: 17px; color: var(--slate); max-width: 640px; line-height: 1.75; margin-bottom: 3rem; }
+/* SERVICE SECTION LAYOUT */
+.svc-section { border-bottom: 1px solid var(--rule-light); }
+.svc-section:last-child { border-bottom: none; }
+.svc-section-alt { background: var(--off-white); }
+.svc-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 5rem; align-items: start; }
+.svc-includes { display: flex; flex-direction: column; gap: 1.5rem; }
+.svc-include-item { display: flex; gap: 1rem; align-items: flex-start; }
+.svc-include-icon { width: 36px; height: 36px; background: var(--teal-dim); border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+.svc-include-icon svg { width: 16px; height: 16px; stroke: var(--teal); stroke-width: 1.8; fill: none; }
+.svc-include-item h3 { font-size: 14px; font-weight: 600; color: var(--charcoal); margin-bottom: 0.3rem; }
+.svc-include-item p { font-size: 13px; color: var(--slate); line-height: 1.65; }
+.svc-sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+.svc-box { background: var(--navy); border-radius: 8px; padding: 1.75rem; position: relative; overflow: hidden; }
+.svc-box-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(14,207,179,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(14,207,179,0.04) 1px, transparent 1px); background-size: 28px 28px; border-radius: 8px; }
+.svc-box-label { font-family: 'Space Grotesk', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); margin-bottom: 0.5rem; position: relative; z-index: 1; }
+.svc-box-title { font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600; color: var(--white); margin-bottom: 0.65rem; position: relative; z-index: 1; line-height: 1.3; }
+.svc-box p { font-size: 13px; color: var(--mist); line-height: 1.65; position: relative; z-index: 1; }
+.svc-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 1rem; position: relative; z-index: 1; }
+.tag { font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 500; background: var(--teal-dim); color: var(--teal); border: 1px solid rgba(14,207,179,0.2); padding: 3px 10px; border-radius: 100px; display: inline-block; }
+.svc-cta-box { background: var(--gray-light); border-radius: 8px; padding: 2rem; border: 1px solid var(--rule-light); margin-top: 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+.svc-cta-box p { font-size: 15px; font-weight: 500; color: var(--charcoal); max-width: 420px; line-height: 1.5; }
+.btn-teal { background: var(--teal); color: var(--navy); padding: 12px 24px; border-radius: 4px; font-size: 13px; font-weight: 600; text-decoration: none; transition: opacity 0.2s; display: inline-block; white-space: nowrap; }
+.btn-teal:hover { opacity: 0.88; }
+/* OVERVIEW INTRO */
+.overview-intro { background: var(--white); }
+.overview-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule-light); border: 1px solid var(--rule-light); border-radius: 8px; overflow: hidden; margin-top: 3rem; }
+.overview-card { background: var(--white); padding: 2rem 1.75rem; transition: background 0.2s; cursor: pointer; text-decoration: none; display: block; }
+.overview-card:hover { background: var(--off-white); }
+.overview-card-num { font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 600; color: var(--teal); letter-spacing: 0.1em; display: block; margin-bottom: 1rem; }
+.overview-card h3 { font-size: 15px; font-weight: 600; color: var(--charcoal); margin-bottom: 0.5rem; line-height: 1.3; }
+.overview-card p { font-size: 13px; color: var(--slate); line-height: 1.65; }
+.overview-card-arrow { font-size: 16px; color: var(--teal); margin-top: 1rem; display: block; transition: transform 0.2s; }
+.overview-card:hover .overview-card-arrow { transform: translateX(4px); }
+/* FOOTER */
+footer { background: var(--charcoal); padding: 3.5rem 4rem 2rem; border-top: 1px solid rgba(255,255,255,0.06); }
+.footer-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 3rem; }
+.footer-brand-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 0.75rem; }
+.footer-mark { width: 28px; height: 28px; border: 1.5px solid var(--teal); border-radius: 4px; display: flex; align-items: center; justify-content: center; }
+.footer-mark span { font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 700; color: var(--teal); }
+.footer-brand-name { font-size: 13px; font-weight: 500; color: var(--white); }
+.footer-tagline { font-size: 13px; color: var(--mist); line-height: 1.65; max-width: 220px; }
+.footer-col h5 { font-family: 'Space Grotesk', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal); margin-bottom: 1.1rem; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+.footer-col a { font-size: 13px; color: var(--mist); text-decoration: none; transition: color 0.2s; }
+.footer-col a:hover { color: var(--white); }
+.footer-bottom { max-width: 1100px; margin: 0 auto; padding-top: 1.75rem; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; }
+.footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.22); }
+@media (max-width: 900px) {
+  nav { padding: 0 1.5rem; }
+  .nav-links { display: none; position: fixed; top: 66px; left: 0; right: 0; background: rgba(13,27,42,0.99); flex-direction: column; padding: 2rem 1.5rem; gap: 1.25rem; border-bottom: 1px solid var(--rule); }
+  .nav-links.open { display: flex; }
+  .nav-hamburger { display: flex; }
+  section { padding: 60px 1.5rem; }
+  .page-hero { padding: 120px 1.5rem 60px; }
+  .svc-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+  .overview-grid { grid-template-columns: 1fr 1fr; }
+  .services-nav { padding: 0 1.5rem; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+  footer { padding: 2.5rem 1.5rem 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <div class="nav-logo-mark"><span>SL</span></div>
+    <span class="nav-logo-text">Accounting Solutions<sub>CPA PLLC</sub></span>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="https://portal.slaccountingsolutions.com/" target="_blank">Client Portal</a></li>
+    <li><a href="https://calendly.com/lee-little-slaccountingsolutions/30min" target="_blank" class="nav-cta">Schedule a Call</a></li>
+  </ul>
+  <div class="nav-hamburger" id="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-glow"></div>
+  <div class="page-hero-inner">
+    <span class="eyebrow">What We Do</span>
+    <h1>Full-stack financial intelligence for high-growth enterprises.</h1>
+    <p class="page-hero-sub">We provide strategic, institutional-grade accounting, bookkeeping, and proactive tax frameworks tailored to the complex lifecycle of SaaS, tech, pharma, and biotech companies.</p>
+  </div>
+</div>
+
+<!-- SERVICES SUB-NAV -->
+<div class="services-nav">
+  <a href="#overview">Overview</a>
+  <a href="#bookkeeping">Cloud Bookkeeping</a>
+  <a href="#cfo">Fractional CFO</a>
+  <a href="#tax-prep">Tax Preparation</a>
+  <a href="#tax-strategy">Tax Strategy</a>
+</div>
+
+<!-- OVERVIEW -->
+<section class="overview-intro" id="overview">
+  <div class="section-inner">
+    <span class="eyebrow">Service Lines</span>
+    <h2>Four practice areas. Zero generalist overlap.</h2>
+    <p class="section-lead">Every engagement is scoped around the specific financial complexity your stage requires — from your first institutional round to a planned exit.</p>
+    <div class="overview-grid">
+      <a href="#bookkeeping" class="overview-card">
+        <span class="overview-card-num">01</span>
+        <h3>Cloud Architecture & Enterprise Bookkeeping</h3>
+        <p>Scalable GAAP-compliant infrastructure built to survive due diligence.</p>
+        <span class="overview-card-arrow">→</span>
+      </a>
+      <a href="#cfo" class="overview-card">
+        <span class="overview-card-num">02</span>
+        <h3>Fractional CFO & Corporate Finance Advisory</h3>
+        <p>C-suite financial leadership without the full-time overhead.</p>
+        <span class="overview-card-arrow">→</span>
+      </a>
+      <a href="#tax-prep" class="overview-card">
+        <span class="overview-card-num">03</span>
+        <h3>Corporate Tax Preparation & Compliance</h3>
+        <p>Accurate, institutional-grade business filings that protect cash reserves.</p>
+        <span class="overview-card-arrow">→</span>
+      </a>
+      <a href="#tax-strategy" class="overview-card">
+        <span class="overview-card-num">04</span>
+        <h3>Advanced Tax Strategy & Value Optimization</h3>
+        <p>Year-round structural tax mitigation — not seasonal preparation.</p>
+        <span class="overview-card-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKKEEPING -->
+<section class="svc-section" id="bookkeeping">
+  <div class="section-inner">
+    <div class="svc-layout">
+      <div>
+        <span class="eyebrow">Service 01</span>
+        <h2>Cloud Architecture & Enterprise Bookkeeping</h2>
+        <p class="section-lead">A consistent monthly close process that produces decision-ready financials. We architect scalable financial infrastructure that mirrors GAAP compliance and evolves alongside your capital trajectory.</p>
+        <div class="svc-includes">
+          <div class="svc-include-item">
+            <div class="svc-include-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+            <div>
+              <h3>Automated Tech Stack Management</h3>
+              <p>Architecting and project-managing your cloud ledger ecosystem (QuickBooks Online, Dext, TaxDome) for seamless multi-tier data flow.</p>
+            </div>
+          </div>
+          <div class="svc-include-item">
+            <div class="svc-include-icon"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 12l4-4 4 4 4-4"/></svg></div>
+            <div>
+              <h3>Cash-to-Accrual Infrastructure</h3>
+              <p>Transitioning entity ledgers to match GAAP accrual standards and standard corporate accounting frameworks for institutional readiness.</p>
+            </div>
+          </div>
+          <div class="svc-include-item">
+            <div class="svc-include-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg></div>
+            <div>
+              <h3>Standardized Financial Statement Packages</h3>
+              <p>Investor-ready Balance Sheets and P&L statements optimized for board reviews and funding rounds.</p>
+            </div>
+          </div>
+          <div class="svc-include-item">
+            <div class="svc-include-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <div>
+              <h3>Clean Ledger Engineering</h3>
+              <p>Structuring data to feed directly into tax mitigation planning, R&D tax credit captures, and predictive cash flow runway modeling.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="svc-sidebar">
+        <div class="svc-box">
+          <div class="svc-box-grid"></div>
+          <div class="svc-box-label">Best For</div>
+          <div class="svc-box-title">Business owners who want accurate numbers without the monthly scramble</div>
+          <p>Or those who need to establish an optimized foundation for advanced corporate tax strategy.</p>
+          <div class="svc-tags">
+            <span class="tag">QBO</span><span class="tag">Dext</span><span class="tag">TaxDome</span>
+            <span class="tag">GAAP Accrual</span><span class="tag">ASC 606</span>
+          </div>
+        </div>
+        <div class="svc-cta-box">
+          <p>Ready to build a financial infrastructure that survives due diligence?</p>
+          <a href="https://calendly.com/lee-little-slaccountingsolutions/30min" target="_blank" class="btn-teal">Get an Assessment</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FRACTIONAL CFO -->
+<section class="svc-section svc-section-alt" id="cfo">
+  <div class="section-inner">
+    <div class="svc-layout">
+      <div>
+        <span class="eyebrow">Service 02</span>
+        <h2>Fractional CFO & Corporate Finance Advisory</h2>
+        <p class="section-lead">Bridge the gap between basic filing and high-level C-suite financial intelligence — without the overhead of a full-time hire. Built for venture-backed startups and scaling entities at $1.5M+ revenue.</p>
+
+        <h3 style="color:var(--teal); font-size:12px; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:1rem; margin-top:0.5rem;">Advanced Core Accounting</h3>
+        <div class="svc-includes" style="margin-bottom:2rem;">
+          <div class="svc-include-item">
+            <div class="svc-include-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 10h16M10 4v16"/></svg></div>
+            <div><h3>Daily Data Pipeline Sync</h3><p>Continuous maintenance of your cloud accounting ecosystem (QBO, Dext, TaxDome).</p></div>
+          </div>
+          <div class="svc-include-item">
+            <div class="svc-include-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+            <div><h3>End-to-End Treasury Infrastructure</h3><p>Full oversight of Accounts Payable and automated AR management to eliminate cash flow timing friction.</p></div>
+          </div>
+        </div>
+
+        <h3 style="color:var(--teal); font-size:12px; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:1rem;">Payroll & Multi-State Compliance</h3>
+        <div class="svc-includes" style="margin-bottom:2rem;">
+          <div class="svc-include-item">
+            <div class="svc-include-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div><h3>Advanced Corporate HR Guardrails</h3><p>Managing complex tech team payroll, equity incentive distributions, and multi-state/international remote hiring nexus compliance.</p></div>
+          </div>
+        </div>
+
+        <h3 style="color:var(--teal); font-size:12px; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:1rem;">Predictive CFO Advisory</h3>
+        <div class="svc-includes" style="margin-bottom:2rem;">
+          <div class="svc-include-item">
+            <div class="svc-include-icon"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 16l4-8 4 4 4-6"/></svg></div>
+            <div><h3>Dynamic Runway Modeling</h3><p>Rolling 12-month cash flow forecasting with precise burn rate monitoring to catch capital gaps 4–6 months in advance.</p></div>
+          </div>
+          <div class="svc-include-item">
+            <div class="svc-include-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+            <div><h3>Board-Grade Performance Reporting</h3><p>Investor deck optimization, cap table advisory, and financial reporting packages engineered to survive rigid VC due diligence.</p></div>
+          </div>
+          <div class="svc-include-item">
+            <div class="svc-include-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <div><h3>Direct C-Suite Access</h3><p>IM access (Google Chat) for ad-hoc strategic decisions alongside dedicated weekly executive financial briefings.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="svc-sidebar">
+        <div class="svc-box">
+          <div class="svc-box-grid"></div>
+          <div class="svc-box-label">Ideal Client Profile</div>
+          <div class="svc-box-title">Venture-backed startups, high-growth SaaS/tech, and scaling biotech entities</div>
+          <p>$1.5M+ revenue requiring advanced financial leadership to protect capital, deploy funding, and drive enterprise exit value.</p>
+          <div class="svc-tags">
+            <span class="tag">Fractional CFO</span><span class="tag">Board Reporting</span>
+            <span class="tag">Runway Models</span><span class="tag">Cap Table</span><span class="tag">Payroll</span>
+          </div>
+        </div>
+        <div class="svc-box" style="background: rgba(14,207,179,0.06); border: 1px solid rgba(14,207,179,0.2);">
+          <div class="svc-box-label" style="position:relative;z-index:1;">Key Metric</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:36px; font-weight:700; color:var(--teal); line-height:1; margin-bottom:0.4rem;">4–6 mo</div>
+          <p style="font-size:13px; color:var(--slate);">Capital gap visibility in advance through dynamic runway modeling</p>
+        </div>
+        <div class="svc-cta-box">
+          <p>Ready for C-suite financial leadership?</p>
+          <a href="https://calendly.com/lee-little-slaccountingsolutions/30min" target="_blank" class="btn-teal">Schedule a Call</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TAX PREP -->
+<section class="svc-section" id="tax-prep">
+  <div class="section-inner">
+    <div class="svc-layout">
+      <div>
+        <span class="eyebrow">Service 03</span>
+        <h2>Corporate Tax Preparation & Compliance</h2>
+        <p class="section-lead">Accurate business filings supported by strong documentation and coordination. We master institutional corporate tax structures to protect your cash reserves while achieving pristine compliance.</p>
+        <div class="svc-includes">
+          <div class="svc-include-item">
+            <div class="svc-include-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+            <div><h3>Business Return Preparation & Filing</h3><p>Comprehensive corporate tax return preparation scoped per entity type, with full documentation management.</p></div>
+          </div>
+          <div class="svc-include-item">
+            <div class="svc-include-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div>
+            <div><h3>Extensions & Deadline Management</h3><p>Strategic extension filing when appropriate with clear documentation requirements and zero surprise deadlines.</p></div>
+          </div>
+          <div class="svc-include-item">
+            <div class="svc-include-icon"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            <div><h3>Owner Return Add-On</h3><p>Individual owner returns available as an add-on for business owners requiring integrated personal and business tax filing.</p></div>
+          </div>
+        </div>
+        <div style="background: var(--off-white); border: 1px solid var(--rule-light); border-radius: 8px; padding: 1.5rem; margin-top: 2rem; border-left: 3px solid var(--teal);">
+          <p style="font-size:14px; font-weight:600; color:var(--charcoal); margin-bottom:0.4rem;">Important Note</p>
+          <p style="font-size:13px; color:var(--slate); line-height:1.65;">Tax return preparation is typically a separate engagement from tax strategy so pricing and expectations stay fair and clear.</p>
+        </div>
+      </div>
+      <div class="svc-sidebar">
+        <div class="svc-box">
+          <div class="svc-box-grid"></div>
+          <div class="svc-box-label">Our Approach</div>
+          <div class="svc-box-title">Beyond backward-looking compliance</div>
+          <p>By mapping your operational data directly against modern tax regulations, we ensure your entity achieves pristine compliance while legally and aggressively lowering your total tax obligation.</p>
+          <div class="svc-tags">
+            <span class="tag">C-Corp</span><span class="tag">S-Corp</span><span class="tag">LLC</span>
+            <span class="tag">Partnership</span><span class="tag">Multi-State</span>
+          </div>
+        </div>
+        <div class="svc-cta-box">
+          <p>Need accurate, institutional-grade filings?</p>
+          <a href="https://calendly.com/lee-little-slaccountingsolutions/30min" target="_blank" class="btn-teal">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TAX STRATEGY -->
+<section class="svc-section svc-section-alt" id="tax-strategy">
+  <div class="section-inner">
+    <div class="svc-layout">
+      <div>
+        <span class="eyebrow">Service 04</span>
+        <h2>Advanced Tax Strategy & Value Optimization</h2>
+        <p class="section-lead">Turn taxes from a surprise into a plan. An ongoing, forward-looking corporate planning engagement designed to insulate your capital reserves, optimize equity frameworks, and drive enterprise value as your entity scales.</p>
+        <div class="svc-includes">
+          <div class="svc-include-item">
+            <div class="svc-include-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+            <div><h3>Quarterly Strategic Mitigation Planning</h3><p>Dedicated advisory sessions updating corporate forecasts based on real-time YTD performance. We continuously align tax projections with your dynamic operational milestones.</p></div>
+          </div>
+          <div class="svc-include-item">
+            <div class="svc-include-icon"><svg viewBox="0 0 24 24"><polyline points="9,11 12,14 22,4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+            <div><h3>Prioritized Tax Action Roadmaps</h3><p>A structured execution playbook detailing high-impact corporate moves, precise timing, and estimated cash ROI — ensuring zero late-stage surprises.</p></div>
+          </div>
+          <div class="svc-include-item">
+            <div class="svc-include-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+            <div><h3>Section 41 R&D Credit Engineering</h3><p>Identifying and capturing specialized research credits to actively reduce your payroll tax burden — up to $500K in annual offsets for qualifying entities.</p></div>
+          </div>
+          <div class="svc-include-item">
+            <div class="svc-include-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div><h3>Section 1202 QSBS & Equity Advisory</h3><p>Structural planning for founder stock, complex cap tables, and long-term venture-backed exit exclusions to maximize exit value.</p></div>
+          </div>
+          <div class="svc-include-item">
+            <div class="svc-include-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <div><h3>Institutional Milestone Support</h3><p>Immediate tactical support during major corporate trigger points: Series funding rounds, multi-state nexus expansions, international hiring, or asset transactions.</p></div>
+          </div>
+        </div>
+        <div style="background: var(--off-white); border: 1px solid var(--rule-light); border-radius: 8px; padding: 1.5rem; margin-top: 2rem;">
+          <p style="font-size:13px; font-weight:600; color:var(--charcoal); margin-bottom:0.5rem;">How We Work</p>
+          <p style="font-size:13px; color:var(--slate); line-height:1.65;">Clients provide month-end financials and key updates by the <strong>15th of the following month</strong>. Strategy is only as good as the data behind it — if books are behind, we'll recommend cleanup or bookkeeping support first.</p>
+        </div>
+      </div>
+      <div class="svc-sidebar">
+        <div class="svc-box">
+          <div class="svc-box-grid"></div>
+          <div class="svc-box-label">R&D Tax Credit Potential</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:42px; font-weight:700; color:var(--teal); line-height:1; margin-bottom:0.4rem; position:relative;z-index:1;">$500K</div>
+          <p>Maximum payroll tax offset available annually through Section 41 R&D credit optimization for qualifying SaaS, biotech, and tech entities.</p>
+          <div class="svc-tags">
+            <span class="tag">§41 R&D Credits</span><span class="tag">QSBS §1202</span>
+            <span class="tag">State Credits</span><span class="tag">Year-Round</span>
+          </div>
+        </div>
+        <div class="svc-box" style="background: rgba(14,207,179,0.06); border: 1px solid rgba(14,207,179,0.2);">
+          <div class="svc-box-label" style="position:relative;z-index:1;">Key Sectors</div>
+          <div style="display:flex;flex-direction:column;gap:0.5rem;margin-top:0.5rem;">
+            <span style="font-size:13px;color:var(--charcoal);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0;"></span>SaaS & Technology</span>
+            <span style="font-size:13px;color:var(--charcoal);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0;"></span>Pharmaceutical</span>
+            <span style="font-size:13px;color:var(--charcoal);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0;"></span>Biotech</span>
+            <span style="font-size:13px;color:var(--charcoal);display:flex;align-items:center;gap:8px;"><span style="width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0;"></span>Advanced Manufacturing</span>
+          </div>
+        </div>
+        <div class="svc-cta-box">
+          <p>Stop treating tax prep as a cost center. Make it a profit driver.</p>
+          <a href="https://calendly.com/lee-little-slaccountingsolutions/30min" target="_blank" class="btn-teal">Get an Assessment</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-logo"><div class="footer-mark"><span>SL</span></div><span class="footer-brand-name">Accounting Solutions CPA PLLC</span></div>
+      <p class="footer-tagline">Elite, tech-forward financial advisory engineered for high-growth enterprises. Based in Raleigh, NC.</p>
+    </div>
+    <div class="footer-col"><h5>Services</h5><ul><li><a href="#bookkeeping">Cloud Bookkeeping</a></li><li><a href="#cfo">Fractional CFO</a></li><li><a href="#tax-prep">Tax Preparation</a></li><li><a href="#tax-strategy">Tax Strategy</a></li></ul></div>
+    <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About</a></li><li><a href="blog.html">Blog</a></li><li><a href="faq.html">FAQ</a></li><li><a href="https://portal.slaccountingsolutions.com/" target="_blank">Client Portal</a></li></ul></div>
+    <div class="footer-col"><h5>Contact</h5><ul><li><a href="https://calendly.com/lee-little-slaccountingsolutions/30min" target="_blank">Schedule a Call</a></li><li><a href="mailto:info@slaccountingsolutions.com">info@slaccountingsolutions.com</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 SL Accounting Solutions CPA PLLC. All rights reserved.</p><p>CPA Licensed · Raleigh, NC</p></div>
+</footer>
+</body>
+</html>
