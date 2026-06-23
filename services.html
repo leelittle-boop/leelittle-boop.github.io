@@ -97,6 +97,74 @@ html.sl-js [data-sl-reveal].sl-in{opacity:1;transform:none;}
   .sl-hamburger { display: flex; }
 }
 .sl-hamburger { display: none; }
+.sl-mobile-menu { display: none; }
+</style>
+
+<style id="sl-polish">
+/* ===== POLISHED SCROLL REVEAL ===== */
+html.sl-js [data-sl-reveal]{opacity:0;transform:translateY(28px);}
+[data-sl-reveal]{transition:opacity .85s cubic-bezier(.16,.7,.2,1),transform .85s cubic-bezier(.16,.7,.2,1);will-change:opacity,transform;}
+html.sl-js [data-sl-reveal].sl-in{opacity:1;transform:none;}
+
+/* Staggered children: cards lift in one after another */
+html.sl-js [data-sl-stagger] > *{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.16,.7,.2,1),transform .7s cubic-bezier(.16,.7,.2,1);}
+html.sl-js [data-sl-stagger].sl-in > *{opacity:1;transform:none;}
+html.sl-js [data-sl-stagger].sl-in > *:nth-child(1){transition-delay:.04s;}
+html.sl-js [data-sl-stagger].sl-in > *:nth-child(2){transition-delay:.10s;}
+html.sl-js [data-sl-stagger].sl-in > *:nth-child(3){transition-delay:.16s;}
+html.sl-js [data-sl-stagger].sl-in > *:nth-child(4){transition-delay:.22s;}
+html.sl-js [data-sl-stagger].sl-in > *:nth-child(5){transition-delay:.28s;}
+html.sl-js [data-sl-stagger].sl-in > *:nth-child(6){transition-delay:.34s;}
+
+/* ===== INTERACTIVE CARD HOVER ===== */
+/* Any rounded card-like anchor or div gets a lift + shadow on hover */
+a[style*="border-radius: 10px"],
+a[style*="border-radius: 8px"],
+a[style*="border-radius: 12px"],
+div[style*="border-radius: 10px"][style*="border:"],
+div[style*="border-radius: 8px"][style*="border:"]{
+  transition: transform .28s cubic-bezier(.16,.7,.2,1), box-shadow .28s cubic-bezier(.16,.7,.2,1), border-color .28s ease !important;
+}
+a[style*="border-radius: 10px"]:hover,
+a[style*="border-radius: 8px"]:hover,
+a[style*="border-radius: 12px"]:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(27,26,22,0.13);
+  border-color: rgba(46,74,62,0.45) !important;
+}
+
+/* Read-more arrows slide on card hover */
+a:hover .sl-arrow{ transform: translateX(5px); }
+.sl-arrow{ display:inline-block; transition: transform .25s cubic-bezier(.16,.7,.2,1); }
+
+/* ===== NAV LINK UNDERLINE ===== */
+.sl-navlinks a{ position: relative; }
+.sl-navlinks a::after{
+  content:''; position:absolute; left:0; bottom:-4px; height:1.5px; width:0;
+  background:#2E4A3E; transition: width .28s cubic-bezier(.16,.7,.2,1);
+}
+.sl-navlinks a:hover::after{ width:100%; }
+
+/* ===== BUTTON PRESS / HOVER ===== */
+a[style*="background: #2E4A3E"]{ transition: transform .2s ease, box-shadow .25s ease, background .25s ease !important; }
+a[style*="background: #2E4A3E"]:hover{ box-shadow: 0 8px 22px rgba(46,74,62,0.32); transform: translateY(-2px); }
+a[style*="background: #2E4A3E"]:active{ transform: translateY(0); }
+a[style*="background: #F6F2EA"][style*="color: #2E4A3E"]:hover{ box-shadow: 0 8px 22px rgba(27,26,22,0.18); transform: translateY(-2px); }
+
+/* ===== FAQ ACCORDION POLISH ===== */
+details .faq-plus{ transition: transform .3s cubic-bezier(.16,.7,.2,1); transform-origin:center; }
+details[open] .faq-plus{ transform: rotate(45deg); }
+details > div, details > p{ animation: slFaq .4s cubic-bezier(.16,.7,.2,1); }
+@keyframes slFaq{ from{ opacity:0; transform:translateY(-6px); } to{ opacity:1; transform:none; } }
+details summary{ transition: color .2s ease; }
+details summary:hover{ color:#2E4A3E !important; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion:reduce){
+  html.sl-js [data-sl-reveal],
+  html.sl-js [data-sl-stagger] > *{opacity:1!important;transform:none!important;transition:none!important;}
+  a:hover{transform:none!important;}
+}
 </style>
 </head>
 <body>
@@ -207,7 +275,7 @@ html.sl-js [data-sl-reveal].sl-in{opacity:1;transform:none;}
         <p style="font-size: 12px; font-weight: 600; color: #2E4A3E; letter-spacing: 0.16em; text-transform: uppercase; margin: 0 0 16px;">Service 02</p>
         <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.12; letter-spacing: -0.02em; color: #1B1A16; margin: 0 0 18px;">Fractional CFO &amp; finance advisory</h2>
         <p style="font-size: 17px; line-height: 1.65; color: #4A4840; margin: 0 0 36px; max-width: 580px;">C-suite financial leadership without the full-time salary. Built for venture-backed and scaling companies that have outgrown basic filing but aren't ready for a full-time CFO.</p>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+        <div data-sl-stagger style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
           <div style="background: #F6F2EA; border: 1px solid rgba(27,26,22,0.10); border-radius: 8px; padding: 24px;"><h3 style="font-family: 'Newsreader', serif; font-size: 17px; font-weight: 600; color: #1B1A16; margin: 0 0 6px;">Runway modeling</h3><p style="font-size: 14px; line-height: 1.55; color: #57544C; margin: 0;">Rolling 12-month cash forecasts that flag capital gaps 4–6 months ahead — not after they hit.</p></div>
           <div style="background: #F6F2EA; border: 1px solid rgba(27,26,22,0.10); border-radius: 8px; padding: 24px;"><h3 style="font-family: 'Newsreader', serif; font-size: 17px; font-weight: 600; color: #1B1A16; margin: 0 0 6px;">Board reporting</h3><p style="font-size: 14px; line-height: 1.55; color: #57544C; margin: 0;">Investor-grade packages and cap-table advisory that survive real VC due diligence.</p></div>
           <div style="background: #F6F2EA; border: 1px solid rgba(27,26,22,0.10); border-radius: 8px; padding: 24px;"><h3 style="font-family: 'Newsreader', serif; font-size: 17px; font-weight: 600; color: #1B1A16; margin: 0 0 6px;">Treasury &amp; AP/AR</h3><p style="font-size: 14px; line-height: 1.55; color: #57544C; margin: 0;">Oversight of payables and automated receivables to smooth out cash-flow timing.</p></div>
@@ -377,6 +445,22 @@ html.sl-js [data-sl-reveal].sl-in{opacity:1;transform:none;}
 </div>
 <script>
 (function(){var els=[].slice.call(document.querySelectorAll('[data-sl-reveal]'));if(!els.length)return;function reveal(el){el.classList.add('sl-in');}function inView(){var h=window.innerHeight||document.documentElement.clientHeight;els.forEach(function(el){if(!el.classList.contains('sl-in')&&el.getBoundingClientRect().top<h*0.92){reveal(el);}});}inView();if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){reveal(e.target);io.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -7% 0px'});els.forEach(function(el){if(!el.classList.contains('sl-in'))io.observe(el);});}window.addEventListener('scroll',inView,{passive:true});window.addEventListener('resize',inView,{passive:true});setTimeout(function(){els.forEach(reveal);},1600);})();
+</script>
+
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('[data-sl-reveal],[data-sl-stagger]'));
+  if(!els.length)return;
+  function reveal(el){el.classList.add('sl-in');}
+  var h=window.innerHeight||document.documentElement.clientHeight;
+  els.forEach(function(el){ if(el.getBoundingClientRect().top<h*0.9){reveal(el);} });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){reveal(e.target); io.unobserve(e.target);} });
+    },{threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){ if(!el.classList.contains('sl-in'))io.observe(el); });
+  }
+})();
 </script>
 </body>
 </html>
