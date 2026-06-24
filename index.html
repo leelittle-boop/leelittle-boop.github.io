@@ -166,6 +166,11 @@ details summary:hover{ color:#2E4A3E !important; }
   html.sl-js [data-sl-stagger] > *{opacity:1!important;transform:none!important;transition:none!important;}
   a:hover{transform:none!important;}
 }
+
+@media (max-width: 900px){
+  .sl-hero-grid{ grid-template-columns: 1fr !important; gap: 40px !important; }
+  .sl-hero-card{ max-width: 440px; }
+}
 </style>
 </head>
 <body>
@@ -209,19 +214,37 @@ details summary:hover{ color:#2E4A3E !important; }
 
   <!-- HERO -->
   <header id="top" data-screen-label="Hero" style="border-bottom: 1px solid rgba(27,26,22,0.10);">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 104px 40px 96px;">
-      <div style="max-width: 840px;">
+    <div class="sl-hero-grid" style="max-width: 1200px; margin: 0 auto; padding: 100px 40px 92px; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 64px; align-items: center;">
+      <div data-sl-reveal>
         <div style="display: inline-flex; align-items: center; gap: 9px; border: 1px solid rgba(27,26,22,0.14); border-radius: 100px; padding: 6px 14px 6px 12px; margin-bottom: 30px;">
           <span style="width: 6px; height: 6px; border-radius: 50%; background: #2E4A3E; animation: slDot 2.4s ease-in-out infinite;"></span>
           <span style="font-size: 12px; font-weight: 600; color: #57544C; letter-spacing: 0.04em;">Strategic CPA advisory · Raleigh, NC</span>
         </div>
-        <h1 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(40px, 5.2vw, 62px); line-height: 1.05; letter-spacing: -0.02em; color: #1B1A16; margin: 0 0 24px;">A CPA who thinks<br>like your <span style="font-style: italic; color: #2E4A3E;">CFO</span>.</h1>
+        <h1 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(40px, 5vw, 60px); line-height: 1.05; letter-spacing: -0.02em; color: #1B1A16; margin: 0 0 24px;">A CPA who thinks<br>like your <span style="font-style: italic; color: #2E4A3E;">CFO</span>.</h1>
         <p style="font-size: 18px; line-height: 1.65; color: #4A4840; max-width: 480px; margin: 0 0 36px;">SL Accounting Solutions handles the books, the taxes, and the financial strategy for high-growth SaaS, biotech, and manufacturing companies — so you can raise, scale, and plan with confidence.</p>
         <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-bottom: 30px;">
           <a href="https://calendly.com/lee-little-slaccountingsolutions/30min" target="_blank" style="background: #2E4A3E; color: #F6F2EA; padding: 14px 28px; border-radius: 4px; font-size: 15px; font-weight: 600; text-decoration: none;">Book a free assessment</a>
-          <a href="#services" style="display: inline-flex; align-items: center; gap: 7px; color: #1B1A16; font-size: 15px; font-weight: 600; text-decoration: none; padding: 14px 8px;">See our services <span style="color: #2E4A3E;">→</span></a>
+          <a href="#services" style="display: inline-flex; align-items: center; gap: 7px; color: #1B1A16; font-size: 15px; font-weight: 600; text-decoration: none; padding: 14px 8px;">See our services <span class="sl-arrow" style="color: #2E4A3E;">→</span></a>
         </div>
         <p style="font-size: 13.5px; color: #8A8678; font-weight: 500; letter-spacing: 0.01em; margin: 0;">CPA &amp; PMP licensed&nbsp;&nbsp;·&nbsp;&nbsp;Based in Raleigh, NC&nbsp;&nbsp;·&nbsp;&nbsp;Serving scaling companies nationwide</p>
+      </div>
+      <div class="sl-hero-card" data-sl-reveal style="background: #2E4A3E; border-radius: 14px; padding: 36px; position: relative; overflow: hidden;">
+        <div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(246,242,234,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(246,242,234,0.05) 1px, transparent 1px); background-size: 32px 32px; pointer-events: none;"></div>
+        <p style="position: relative; font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #9DBBA9; margin: 0 0 28px;">By the numbers</p>
+        <div style="position: relative; display: flex; flex-direction: column; gap: 22px;">
+          <div style="border-bottom: 1px solid rgba(246,242,234,0.12); padding-bottom: 20px;">
+            <div style="font-family: 'Newsreader', serif; font-size: 38px; font-weight: 500; color: #F6F2EA; line-height: 1;">$500K</div>
+            <div style="font-size: 13.5px; color: #9DBBA9; margin-top: 6px;">In potential R&amp;D payroll tax credits via Section 41</div>
+          </div>
+          <div style="border-bottom: 1px solid rgba(246,242,234,0.12); padding-bottom: 20px;">
+            <div style="font-family: 'Newsreader', serif; font-size: 38px; font-weight: 500; color: #F6F2EA; line-height: 1;">4&ndash;6 mo</div>
+            <div style="font-size: 13.5px; color: #9DBBA9; margin-top: 6px;">Cash runway visibility through dynamic forecasting</div>
+          </div>
+          <div>
+            <div style="font-family: 'Newsreader', serif; font-size: 38px; font-weight: 500; color: #F6F2EA; line-height: 1;">$1M&ndash;$2M+</div>
+            <div style="font-size: 13.5px; color: #9DBBA9; margin-top: 6px;">Revenue range of the high-growth clients we serve</div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -513,5 +536,6 @@ details summary:hover{ color:#2E4A3E !important; }
   }
 })();
 </script>
+
 </body>
 </html>
