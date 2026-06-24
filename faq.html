@@ -170,12 +170,18 @@ details summary:hover{ color:#2E4A3E !important; }
   a:hover{transform:none!important;}
 }
 </style>
+
+<style id="sl-fixed-nav-offset">
+body { padding-top: 72px; }
+/* Anchor jump targets clear the fixed nav */
+[id]{ scroll-margin-top: 84px; }
+</style>
 </head>
 <body>
 <div style="font-family: 'Hanken Grotesk', sans-serif; color: #1B1A16; background: #F6F2EA; -webkit-font-smoothing: antialiased; overflow-x: hidden;">
 
   <!-- NAV -->
-  <nav style="position: sticky; top: 0; z-index: 100; background: rgba(246,242,234,0.88); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid rgba(27,26,22,0.10);">
+  <nav style="position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(246,242,234,0.9); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(27,26,22,0.10);">
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 40px; height: 72px; display: flex; align-items: center; justify-content: space-between;">
       <a href="index.html" style="display: flex; align-items: center; gap: 11px; text-decoration: none;">
         <span style="width: 34px; height: 34px; border: 1.5px solid #2E4A3E; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-family: 'Newsreader', serif; font-size: 15px; font-weight: 600; color: #2E4A3E; letter-spacing: -0.02em;">SL</span>
