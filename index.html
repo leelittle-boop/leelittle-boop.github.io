@@ -178,6 +178,25 @@ body { padding-top: 72px; }
 /* Anchor jump targets clear the fixed nav */
 [id]{ scroll-margin-top: 84px; }
 </style>
+
+<style id="sl-sector-fix">
+@media (max-width: 700px){
+  .sl-sector-strip{
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
+    padding: 20px 20px !important;
+  }
+  .sl-sector-items{
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px !important;
+    width: 100%;
+  }
+  .sl-sector-dot{ display: none !important; }
+  .sl-sector-items span{ font-size: 13.5px !important; }
+}
+</style>
 </head>
 <body>
 <div style="font-family: 'Hanken Grotesk', sans-serif; color: #1B1A16; background: #F6F2EA; -webkit-font-smoothing: antialiased; overflow-x: hidden;">
@@ -257,15 +276,15 @@ body { padding-top: 72px; }
 
   <!-- SECTOR STRIP -->
   <div style="background: #EFEAE0; border-bottom: 1px solid rgba(27,26,22,0.10);">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 22px 40px; display: flex; align-items: center; gap: 36px; flex-wrap: wrap;">
-      <span style="font-size: 11px; font-weight: 600; color: #8A8678; letter-spacing: 0.16em; text-transform: uppercase; white-space: nowrap;">Built for</span>
-      <div style="display: flex; gap: 32px; flex-wrap: wrap; align-items: center;">
+    <div class="sl-sector-strip" style="max-width: 1200px; margin: 0 auto; padding: 22px 40px; display: flex; align-items: center; gap: 36px; flex-wrap: wrap;">
+      <span class="sl-sector-label" style="font-size: 11px; font-weight: 600; color: #8A8678; letter-spacing: 0.16em; text-transform: uppercase; white-space: nowrap;">Built for</span>
+      <div class="sl-sector-items" style="display: flex; gap: 32px; flex-wrap: wrap; align-items: center;">
         <span style="font-size: 14px; font-weight: 600; color: #4A4840;">SaaS &amp; Technology</span>
-        <span style="width: 4px; height: 4px; border-radius: 50%; background: #C3BCA9;"></span>
+        <span class="sl-sector-dot" style="width: 4px; height: 4px; border-radius: 50%; background: #C3BCA9;"></span>
         <span style="font-size: 14px; font-weight: 600; color: #4A4840;">Biotech</span>
-        <span style="width: 4px; height: 4px; border-radius: 50%; background: #C3BCA9;"></span>
+        <span class="sl-sector-dot" style="width: 4px; height: 4px; border-radius: 50%; background: #C3BCA9;"></span>
         <span style="font-size: 14px; font-weight: 600; color: #4A4840;">Pharma &amp; Life Sciences</span>
-        <span style="width: 4px; height: 4px; border-radius: 50%; background: #C3BCA9;"></span>
+        <span class="sl-sector-dot" style="width: 4px; height: 4px; border-radius: 50%; background: #C3BCA9;"></span>
         <span style="font-size: 14px; font-weight: 600; color: #4A4840;">Advanced Manufacturing</span>
       </div>
     </div>
